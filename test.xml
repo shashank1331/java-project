@@ -39,4 +39,4 @@
   <target name="main" depends="test">
     <description>Main target</description>
   </target>
-</project?
+</project>
