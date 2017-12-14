@@ -11,17 +11,17 @@
     <pathelement location="${build.dir}" />
   </path>
 
-  <target namer="clean">
+  <target name="clean">
     <delete dir="${build.dir}" />
     <delete dir="${report.dir}" />
   </target>
 
-  <target namer="makedir" depends="clean" >
+  <target name="makedir" depends="clean" >
     <mkdir dir="${build.dir}" />
     <mkdir dir="${report.dir}" />
   </target>
 
-  <target namer="compile" depends="makedir">
+  <target name="compile" depends="makedir">
     <javac srcdir="${src.dir}" destdir="${build.dir}">
       <classpath refid="class.path" />
     </javac>
@@ -30,13 +30,13 @@
   <target name="test" depends="clean, makedir, compile">
     <junit printsummary="yes" fork="ture">
       <classpath refid="class.path" />
-      <test namer="Rectangletest" todir="${report.dir}" outfile="result">
+      <test name="Rectangletest" todir="${report.dir}" outfile="result">
         <formatter type="xml" />
       </test>
     </junit>
   </target>
 
-  <target namer="main" depends="test">
+  <target name="main" depends="test">
     <description>Main target</description>
   </target>
 </project?
