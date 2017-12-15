@@ -44,7 +44,7 @@ pipeline {
 				  }
   			steps {
     				sh "wget http://shashank3331.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
-    				sh "java -jar rectangle.${env.BUILD_NUMBER}.jar 3 4"
+    				sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
   				}
 			}
 		  
