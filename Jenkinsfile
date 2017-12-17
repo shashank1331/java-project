@@ -100,8 +100,9 @@ pipeline {
                                         )
                                 }
                         }
-
+		}
 		  
+		
 		post {
 			failure{
 				emailtext(
@@ -113,7 +114,5 @@ pipeline {
 				}
 			}
   
-
-
 
 }
